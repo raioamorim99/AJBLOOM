@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | AJBLOOM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/CSS/login.css">
+   <a href="index.html" class="btn-voltar">← Voltar à loja</a>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Bem-vinda à AJBLOOM</h1>
+    <p>Entre com sua conta ou crie uma nova.</p>
+
+    <input type="email" id="email" placeholder="E-mail" required>
+    <input type="password" id="senha" placeholder="Senha" required>
+
+    <div class="btn-group">
+      <button id="btn-login">Entrar</button>
+      <button id="btn-cadastrar">Cadastrar</button>
+       <button id="btn-google" class="google-login">Entrar com Google</button>
+    </div>
+  </div>
+
+ <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
+
+  <script>
+  console.log("🔥 Inline test: este script rodou!");
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("🔥 DOM pronto!");
+    const btn = document.getElementById("btn-cadastrar");
+    console.log("🔥 btnCadastrar existe?", btn);
+    if (btn) {
+      btn.addEventListener("click", () => console.log("🔥 Clique em Cadastrar detectado!"));
+    }
+  });
+</script>
+
+  <!-- Seu script principal -->
+<script src="../JS/login.js" defer></script>
+</body>
+</html>
