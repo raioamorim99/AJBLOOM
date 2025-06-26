@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nós | AJBLOOM</title>
+  <link rel="stylesheet" href="/CSS/index.css" />
+
+  <!-- Fontes -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Ícones -->
+  <link rel="icon" href="/favicon.ico">
+
+  <style>
+    .sobre-hero {
+      background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9)),
+                  url('https://images.unsplash.com/photo-1541099649105-f69ad21f3246?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .sobre-hero h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3rem;
+      color: #333;
+      animation: fadeInDown 1s ease-out;
+    }
+    .pagina-texto section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: #ffffffcc;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: transform 0.4s ease, opacity 0.4s ease;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    .pagina-texto section.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pagina-texto ul li {
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 25px;
+    }
+    .pagina-texto ul li::before {
+      content: "✔️";
+      position: absolute;
+      left: 0;
+    }
+    .btn-voltar {
+      display: inline-block;
+      margin-top: 30px;
+    }
+    .botoes-contato {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .btn-contato-whatsapp,
+    .btn-contato-instagram {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+      color: white;
+    }
+    .btn-contato-whatsapp {
+      background-color: #25d366;
+    }
+    .btn-contato-whatsapp:hover {
+      background-color: #1ebe5d;
+    }
+    .btn-contato-instagram {
+      background-color: #E1306C;
+    }
+    .btn-contato-instagram:hover {
+      background-color: #c72d61;
+    }
+    .email-contato {
+      background-color: #f0f0f0;
+      padding: 10px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #333;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .email-contato a {
+      color: #2a71d0;
+      text-decoration: none;
+    }
+    .email-contato a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="header">
+
+  </header>
+
+  <!-- Hero Image / Topo bonito -->
+  <div class="sobre-hero">
+    <h1>Quem Somos</h1>
+    <p>Moda com propósito, carinho e personalidade. ❤️</p>
+  </div>
+
+  <!-- Conteúdo da Página Sobre -->
+  <section class="pagina-texto">
+
+    <section>
+      <h2>Nossa História</h2>
+      <p>Fundada em Curitiba-PR, a AJBLOOM nasceu de um sonho: levar moda acessível, estilosa e com personalidade para mulheres reais. Desde o início, a nossa missão sempre foi valorizar o bem-estar e a autoestima de cada cliente.</p>
+    </section>
+
+    <section>
+      <h2>Missão</h2>
+      <p>Proporcionar experiências únicas com roupas que transmitam confiança, felicidade e empoderamento feminino.</p>
+    </section>
+
+    <section>
+      <h2>Valores</h2>
+      <ul>
+        <li>Atendimento humanizado e próximo</li>
+        <li>Qualidade em cada detalhe</li>
+        <li>Agilidade nas entregas</li>
+        <li>Respeito ao meio ambiente</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Nosso Compromisso com Você</h2>
+      <p>Não vendemos apenas roupas. Vendemos momentos, autoestima e um pedacinho da nossa história em cada embalagem que chega até você.</p>
+    </section>
+
+    <section>
+      <h2>Fique Conectada</h2>
+      <p>Nos siga nas redes sociais e acompanhe nossas novidades e promoções exclusivas!</p>
+      <div class="botoes-contato">
+        <a href="https://wa.me/5541999999999" class="btn-contato-whatsapp" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp--v1.png" alt="WhatsApp" />
+          Fale conosco no WhatsApp
+        </a>
+
+        <p class="email-contato">
+          <img src="https://img.icons8.com/ios-filled/20/000000/new-post.png" alt="Email" />
+          <a href="mailto:Ajbloomshop@gmail.com">Ajbloomshop@gmail.com</a>
+        </p>
+
+        <a href="https://instagram.com/ajbloom_" class="btn-contato-instagram" target="_blank">
+          <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" />
+          Visite nosso Instagram
+        </a>
+      </div>
+    </section>
+
+    <a href="index.html" class="btn-voltar">← Voltar à loja</a>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>informações</h4>
+      <p>📍 Curitiba - PR</p>
+      <p>✉️ Ajbloomshop@gmail.com</p>
+    </div>
+    <div class="footer-column">
+      <ul>
+        <li><a href="/HTML/contato.html">Contato</a></li>
+        <li><a href="/HTML/sobre.html">Sobre nós</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>Pagamentos</h4>
+      <div class="payment-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" />
+        <img src="https://img.icons8.com/color/48/pix.png" alt="Pix" />
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h4>Siga nos</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ajbloom_/"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png"  alt="Instagram" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/facebook-new.png" alt="Facebook" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/tiktok.png" alt="TikTok" /></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 AJBLOOM.shop – Todos os direitos reservados.</p>
+</footer>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDV1x2NIvYm6z7BmxQNDbHCYwxYyR5OMMQ",
+      authDomain: "ajbloom-login.firebaseapp.com",
+      projectId: "ajbloom-login",
+      storageBucket: "ajbloom-login.appspot.com",
+      messagingSenderId: "99320025218",
+      appId: "1:99320025218:web:616cd54aff52671e9da49b"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Animação ao rolar -->
+  <script>
+    const sections = document.querySelectorAll('.pagina-texto section');
+    function revealSections() {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          sec.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealSections);
+    window.addEventListener('load', revealSections);
+  </script>
+
+</body>
+</html>
