@@ -1,0 +1,230 @@
+ <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AJBLOOM.Shop</title>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat:wght@400;600&family=Dancing+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/CSS/index.css" />
+</head>
+<body>
+
+<header class="header">
+  
+  
+
+  <!-- Top Bar -->
+  <div class="header-top-bar">
+  </div>
+
+  <!-- Topo -->
+  <div class="topo">
+    <button id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="side-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <div class="logo-ajbloom animate-on-scroll">
+      <h1 class="marca animate-on-scroll">AJBLOOM</h1>
+      <p class="slogan animate-on-scroll">SHOP ONLINE</p>
+    </div>
+  </div>
+
+  <!-- Menu Desktop (sem submenus de filtro) -->
+  <nav class="desktop-menu animate-on-scroll" aria-label="Menu principal">
+    <ul class="menu-desktop">
+      <li><a href="#" id="home.link">Home</a></li>
+      <li><a href="/HTML/contato.html">Contato</a></li>
+      <li><a href="/HTML/sobre.html">Sobre nós</a></li>
+    </ul>
+  </nav>
+
+  <!-- Menu Lateral (Mobile, sem submenus) -->
+  <nav id="side-menu" class="menu-lateral" aria-hidden="true" aria-labelledby="menu-toggle" tabindex="-1">
+    <button id="close-menu" aria-label="Fechar menu">×</button>
+    <ul class="menu-lista">
+      <li><a href="#">Home</a></li>
+      <li><a href="/HTML/contato.html">Contato</a></li>
+      <li><a href="/HTML/sobre.html">Sobre nós</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div id="overlay"></div>
+
+<section class="hero-slider animate-on-scroll">
+  <div class="slides">
+    <div class="slide"><img src="/IMG/VISTA-SE de AJBLOOM.jpg" alt="Banner 1" /></div>
+    <div class="slide"><img src="/IMG/Estilo que te acompanha.jpg" alt="Banner 2" /></div>
+    <div class="slide"><img src="/IMG/voce ganhou.jpg" alt="Banner 3" /></div>
+  </div>
+  <div class="dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+  </div>
+</section>
+
+<!-- Banner de Promoção -->
+<div class="ajb-banner-topo">
+  <p>🌟 Frete grátis acima de R$199 | Lançamentos semanais 🌟</p>
+</div>
+
+
+<!-- produto-destaque -->
+
+<section class="ajb-produto-destaque animate-on-scroll">
+  <h3>Produto em Alta</h3>
+  <div class="ajb-produto-card">
+    <img src="/IMG/produto fashion.jpg" alt="Produto em destaque">
+    <div class="ajb-produto-info">
+      <h4>Macacão Floral</h4>
+      <p>Leve, confortável e ideal para dias quentes. Edição limitada.</p>
+      <a href="#produtos" class="btn-cta">Ver Produto</a>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- filtro -->
+<section id="destaques" class="destaques container animate-on-scroll">
+  <div class="section-header">
+    <select id="filtro-categoria">
+      <option value="tudo">Todas Categorias</option>
+      <option value="camisetas">Camisetas</option>
+      <option value="vestidos">Vestidos</option>
+      <option value="acessorios">Acessórios</option>
+    </select>
+  </div>
+  <div id="produtos" class="produtos-grid"></div>
+  <button id="ver-mais" class="botao-ver-mais" style="margin-top: 20px;">Ver mais</button>
+</section>
+
+
+
+
+
+
+<!-- Entrega rápida e segura -->
+
+<section class="ajb-valores animate-on-scroll">
+  <div class="ajb-valor">
+    <img src="https://img.icons8.com/color/48/delivery.png" alt="Entrega">
+    <p>Entrega rápida</p>
+  </div>
+  <div class="ajb-valor">
+    <img src="https://img.icons8.com/color/48/checked.png" alt="Qualidade">
+    <p>Qualidade garantida</p>
+  </div>
+  <div class="ajb-valor">
+    <img src="https://img.icons8.com/color/48/customer-support.png" alt="Suporte">
+    <p>Atendimento humano</p>
+  </div>
+</section>
+
+<!-- Depoimentos -->
+<section class="ajb-depoimentos animate-on-scroll">
+  <h3>#SouAJBLOOM</h3>
+
+  <div class="ajb-depoimentos-grid">
+    <div class="ajb-depoimento">
+      <p>"A Experiência AJBLOOM Pelos Olhos Delas"</p>
+      <span>- Annjubs</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- Newsletter -->
+<section class="ajb-newsletter animate-on-scroll">
+  <h3>Fique por dentro das novidades!</h3>
+  <p>Receba nossas coleções e promoções por e-mail.</p>
+  <form id="ajb-newsletter-form">
+    <input type="email" placeholder="Seu melhor e-mail" required />
+    <button type="submit">Assinar</button>
+  </form>
+</section>
+
+<!-- Sobre nós -->
+<section id="sobre" class="sobre">
+  <div class="container">
+    <h3 class="animate-on-scroll">Compromisso com você</h3>
+    <p>
+      Desde o início, nosso foco sempre foi mais do que vender: é entregar qualidade, confiança e respeito em cada detalhe. Acreditamos que cada peça de roupa deve refletir não apenas estilo, mas também a essência de quem a veste. Por isso, escolhemos cuidadosamente nossos fornecedores e parceiros, garantindo que cada produto atenda aos nossos altos padrões de qualidade e responsabilidade social.   
+    </p>
+  </div>
+</section>
+
+
+<footer class="footer animate-on-scroll">
+
+  <div class="footer-container">
+    <div class="footer-column">
+      <p class="creditos-site">
+
+<p class="creditos-site">
+  <img src="/IMG/Logotipo Minimalista Iniciais Preto.jpg" alt="Logo LR" class="logo-lr-img" />
+  Desenvolvido por 
+  <a href="https://www.instagram.com/luantech.oficial" target="_blank">Luan Raio</a> | 
+  <a href="https://luanraio.dev" target="_blank">Portfólio</a>
+</p>
+
+
+      <h4>informações</h4>
+      <p>📍 Curitiba - PR</p>
+      <p>✉️ Ajbloomshop@gmail.com</p>
+    </div>
+    <div class="footer-column">
+      <ul>
+        <li><a href="/HTML/contato.html">Contato</a></li>
+        <li><a href="/HTML/sobre.html">Sobre nós</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Pagamentos</h4>
+      <div class="payment-icons">
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" />
+        <img src="https://img.icons8.com/color/48/pix.png" alt="Pix" />
+      </div>
+    </div>
+    <div class="footer-column">
+      <h4>Siga nos</h4>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/ajbloom_/"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/tiktok.png" alt="TikTok" /></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom animate-on-scroll">
+    <p>© 2025 AJBLOOM.shop – Todos os direitos reservados.</p>
+    <div class="footer-links">
+      <a href="politica.html">Política de Privacidade</a><span>|</span>
+      <a href="trocas.html">Trocas e Devoluções</a><span>|</span>
+      <a href="termos.html">Termos de Serviço</a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/5541999999999?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+produtos+da+AJBLOOM%21" class="whatsapp-btn" target="_blank" aria-label="Fale conosco pelo WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
+</a>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+<script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDV1x2NIvYm6z7BmxQNDbHCYwxYyR5OMMQ",
+    authDomain: "ajbloom-login.firebaseapp.com",
+    projectId: "ajbloom-login",
+    storageBucket: "ajbloom-login.appspot.com",
+    messagingSenderId: "99320025218",
+    appId: "1:99320025218:web:616cd54aff52671e9da49b"
+  };
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="/JS/index.js"></script>
+</body>
+</html>
