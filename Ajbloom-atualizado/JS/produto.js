@@ -8,7 +8,14 @@ const produtos = [
     categoria: "camisetas",
     imagem:
       "https://images.unsplash.com/photo-1733395700989-febbc2d31ed8?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+       destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
+
   {
     id: 2,
     nome: "Vestido Casual",
@@ -17,6 +24,12 @@ const produtos = [
     categoria: "vestidos",
     imagem:
       "https://images.unsplash.com/photo-1618932260643-eee4a2f652a6?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dmVzdGlkb3xlbnwwfHwwfHx8MA%3D%3D",
+     destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
   },
   {
     id: 3,
@@ -26,7 +39,13 @@ const produtos = [
     categoria: "acessorios",
     imagem:
       "https://plus.unsplash.com/premium_photo-1681276169450-4504a2442173?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 4,
     nome: "Camiseta Estampada",
@@ -35,7 +54,13 @@ const produtos = [
     categoria: "camisetas",
     imagem:
       "https://images.unsplash.com/photo-1738651875561-2f81f962338c?q=80&w=928&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 5,
     nome: "Vestido Elegante",
@@ -44,7 +69,13 @@ const produtos = [
     categoria: "vestidos",
     imagem:
       "https://images.unsplash.com/photo-1617790274211-cbe0e677b425?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 6,
     nome: "Colar Fashion",
@@ -53,7 +84,13 @@ const produtos = [
     categoria: "acessorios",
     imagem:
       "https://plus.unsplash.com/premium_photo-1674255466849-b23fc5f5d3eb?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 7,
     nome: "Crooped Básica",
@@ -62,7 +99,13 @@ const produtos = [
     categoria: "camisetas",
     imagem:
       "https://images.unsplash.com/photo-1622116756680-fee39c84f9bd?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 8,
     nome: "Listrada",
@@ -71,7 +114,13 @@ const produtos = [
     categoria: "acessorios",
     imagem:
       "https://images.unsplash.com/photo-1712811593599-d95c6fc6dece?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 9,
     nome: "Shorts Jeans",
@@ -80,7 +129,13 @@ const produtos = [
     categoria: "vestidos",
     imagem:
       "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2hvcnRzJTIwamVhbnN8ZW58MHx8MHx8fDA%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+},
   {
     id: 10,
     nome: "Conjunto",
@@ -89,7 +144,13 @@ const produtos = [
     categoria: "camisetas",
     imagem:
       "https://plus.unsplash.com/premium_photo-1723553201287-ab9a8fbe57d1?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
+   destaques: [
+    "✓ Tecido 100% algodão",
+    "✓ Estampa floral exclusiva",
+    "✓ Ideal para dias quentes"
+  ],
+  relacionados: [4, 7, 10] // IDs de produtos relacionados
+} 
 ];
 
 // Captura ID da URL (ex: produto.html?id=3)
@@ -230,3 +291,5 @@ if (botaoHome) {
     }
   });
 }
+
+

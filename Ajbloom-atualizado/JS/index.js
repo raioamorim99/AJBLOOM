@@ -422,3 +422,99 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// modal //
+function abrirLookModal(look) {
+  document.getElementById("look-img").src = look.img;
+  document.getElementById("look-nome").textContent = look.nome;
+  document.getElementById("look-desc").textContent = look.desc;
+  document.getElementById("look-btn").href = look.link;
+  document.getElementById("look-modal").classList.add("ativo");
+}
+
+function fecharLookModal() {
+  document.getElementById("look-modal").classList.remove("ativo");
+}
+
+// Exemplo de dados dos looks:
+const looks = [
+  {
+    nome: "Coleção Floral",
+    desc: "Peças leves, florais e delicadas, ideais para a nova estação.",
+    img: "/IMG/teste.jpg",
+    link: "#colecao-floral"
+  },
+  {
+    nome: "Casual Elegante",
+    desc: "O equilíbrio perfeito entre o casual e o sofisticado.",
+    img: "/IMG/teste.jpg",
+    link: "#casual-elegante"
+  },
+  {
+    nome: "Summer Vibes",
+    desc: "Cores vibrantes, tecidos frescos e muito estilo.",
+    img: "/IMG/teste.jpg",
+    link: "#summer-vibes"
+  },
+  {
+    nome: "Street Bloom",
+    desc: "Estilo urbano com o toque AJBLOOM de leveza e atitude.",
+    img: "/IMG/teste.jpg",
+    link: "#street-bloom"
+  },
+  {
+    nome: "Minimal Bloom",
+    desc: "Design limpo, moderno e floral — menos é mais.",
+    img: "/IMG/teste.jpg",
+    link: "#minimal-bloom"
+  },
+  {
+    nome: "Denim Garden",
+    desc: "Jeans com recortes florais e frescor casual chic.",
+    img: "/IMG/teste.jpg",
+    link: "#denim-garden"
+  },
+  {
+    nome: "Fresh Elegance",
+    desc: "Cortes clássicos em tecidos suaves e tons leves.",
+    img: "/IMG/teste.jpg",
+    link: "#fresh-elegance"
+  },
+  {
+    nome: "AJ Girl",
+    desc: "Estilo leve, jovem, e cheio de autenticidade.",
+    img: "/IMG/teste.jpg",
+    link: "#aj-girl"
+  }
+];
+
+
+// Detectar cliques nos cards
+document.querySelectorAll(".lookbook-item").forEach((item, i) => {
+  item.addEventListener("click", () => abrirLookModal(looks[i]));
+});
+
+// pétalas ❀ estilo lírio azul
+function iniciarPetalas(containerId, quantidade = 20) {
+  const container = document.getElementById(containerId);
+
+  for (let i = 0; i < quantidade; i++) {
+    const petala = document.createElement("div");
+    petala.classList.add("petala");
+    petala.textContent = "❀"; // símbolo floral escolhido
+
+    petala.style.left = Math.random() * 100 + "vw";
+    petala.style.animationDuration = 4 + Math.random() * 5 + "s";
+    petala.style.animationDelay = Math.random() * 3 + "s";
+    petala.style.opacity = 0.4 + Math.random() * 0.6;
+    petala.style.fontSize = 18 + Math.random() * 16 + "px";
+    petala.style.color = "#7db9e8"; // azul lírio suave
+    container.appendChild(petala);
+  }
+}
+
+iniciarPetalas("petalas-lookbook");
+
+
+
+

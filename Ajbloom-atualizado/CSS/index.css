@@ -6,9 +6,6 @@
     margin-top: 120px !important;
   }
 }
-/* ============================================= */
-/* ========= IMPORTAÇÃO DE FONTES ========== */
-@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat:wght@400;600&family=Dancing+Script&display=swap');
 
 /* ============================================= */
 /* ========= VARIÁVEIS GLOBAIS & RESET ========= */
@@ -56,6 +53,7 @@ a {
 
 /* ============================================= */
 /* ========= CABEÇALHO (HEADER) ========== */
+
 
 /* 0) Em desktop, torna o header fixo no topo */
 @media (min-width: 769px) {
@@ -270,7 +268,7 @@ a {
 }
 
 /* ============================================= */
-/* ======== HERO SLIDER (3 BANNERS) ========= */
+/* ======== HERO SLIDER (4 BANNERS) ========= */
 .hero-slider {
   position: relative;
   overflow-x: auto;
@@ -298,6 +296,41 @@ a {
   display: block;
   user-select: none;
   -webkit-user-drag: none;
+}
+
+/* bem vinda */
+.hero-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--fundo-geral);
+  z-index: 2;
+  max-width: 90%;
+}
+
+.hero-text-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  
+}
+
+.hero-text-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+
+
+.btn-explorar {
+  background-color: var(--fundo-clean) !important;
+  color: white !important;
+  padding: 12px 24px !important;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
 }
 
 
@@ -522,22 +555,7 @@ a {
   background-color: #c72d61;
 }
 
-
-/* ============================================= */
 /* ========= RODAPÉ ========== */
-.sobre {
-  background-color: #8195af;
-  padding: 50px 20px;
-  text-align: center;
-  color: #fcf9f9;
-}
-.contato {
-  background-color: #8195af;
-  padding: 50px 10px;
-  text-align: center;
-  color: #ffffff;
-}
-
 .footer {
   background-color: #8195af;
   color: #fff;
@@ -547,16 +565,24 @@ a {
 }
 
 .footer-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
+  text-align: center;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  min-width: 200px;
 }
 
 .footer-column h4 {
   font-size: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   color: #fff;
   font-weight: 600;
   text-transform: uppercase;
@@ -564,7 +590,7 @@ a {
 
 .footer-column p,
 .footer-column ul li {
-  margin: 5px 0;
+  margin: 6px 0;
 }
 
 .footer-column ul {
@@ -578,17 +604,25 @@ a {
 }
 
 .footer-column ul li a:hover {
-  color: var(--fundo-clean)
+  color: var(--fundo-clean);
+}
 
+.payment-icons,
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
 }
 
 .payment-icons img,
 .social-icons img {
   width: 32px;
-  margin-right: 10px;
-  margin-top: 5px;
+  height: 32px;
 }
 
+/* Parte inferior do rodapé */
 .footer-bottom {
   border-top: 1px solid #333;
   margin-top: 30px;
@@ -604,108 +638,12 @@ a {
 
 .footer-links a {
   color: var(--fundo-geral);
-  margin: 0 5px;
+  margin: 0 10px;
   text-decoration: none;
 }
 
 .footer-links a:hover {
   color: var(--fundo-clean);
-}
-/* ============================================= */
-/* ========= Página Contato Css ========== */
-.contato-section {
-  padding: 60px 20px;
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-}
-
-.contato-section h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  color: #222;
-  font-family: 'Dancing Script', cursive;
-}
-
-.contato-section p {
-  color: #555;
-  margin-bottom: 30px;
-  font-size: 15px;
-}
-
-.form-contato {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.form-contato input,
-.form-contato textarea {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-}
-
-.form-contato button {
-  background-color: #000;
-  color: #fff;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-  font-weight: bold;
-}
-
-.form-contato button:hover {
-  background-color: #333;
-}
-
-.info-contato {
-  margin-top: 30px;
-  color: #444;
-  font-size: 15px;
-}
-
-.info-contato a {
-  color: #000;
-}
-
-/* Páginas institucionais: política, trocas, termos, sobre */
-.pagina-texto {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-  font-family: 'Inter', sans-serif;
-  color: #444;
-  line-height: 1.7;
-}
-
-.pagina-texto h1 {
-  font-size: 30px;
-  margin-bottom: 25px;
-  color: #111;
-  font-family: 'Dancing Script', cursive;
-  text-align: center;
-}
-
-.pagina-texto p {
-  font-size: 15px;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-.pagina-texto ul {
-  margin-bottom: 20px;
-  padding-left: 20px;
-}
-
-.pagina-texto ul li {
-  list-style-type: disc;
-  margin-bottom: 10px;
-  font-size: 15px;
 }
 
 
@@ -987,35 +925,7 @@ a {
   opacity: 0.8;
 }
 
-.ajb-mini-banner {
-  background-color: var(--fundo-clean);
-  color: #333;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  font-weight: 600;
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
 
-.btn-mini-banner {
-  background-color: var(--cor-principal);
-  color: var(--fundo-geral);
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-mini-banner:hover {
-  background-color: #648ac5;
-}
 
 /* === Letreiro Promocional no Topo === */
 .ajb-letreiro-topo {
@@ -1101,4 +1011,649 @@ a {
     display: block;
     background-color: #f0f0f0;
   }
+}
+
+/* ============================================= */
+/* ======== ESTILO AJBLOOM VIVAAAA ======== */
+.ajb-estilo {
+  background-color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.titulo-estilo {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.subtitulo-estilo {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.estilo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.estilo-card {
+  position: relative;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+
+.estilo-card:hover {
+  transform: scale(1.03);
+}
+
+.estilo-conteudo {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.estilo-conteudo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.estilo-conteudo p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.btn-estilo {
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-estilo:hover {
+  background-color: #f0f0f0;
+}
+
+.estilo1 {
+  background-image: url('/IMG/teste.jpg');
+}
+.estilo2 {
+  background-image: url('/IMG/teste.jpg');
+}
+.estilo3 {
+  background-image: url('/IMG/teste.jpg');
+}
+
+.cta-estilo {
+  background-color: var(--fundo-clean);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.cta-estilo p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.btn-explorar {
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btn-explorar:hover {
+  background-color: #648ac5;
+}
+
+/*------------------------------------------------------------- parapallax -----------------------------------------------*/
+
+.ajb-parallax-banner {
+  background-image: url('/IMG/teste.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.ajb-parallax-content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 12px;
+  display: inline-block;
+  animation: fadeIn 1.2s ease forwards;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.ajb-parallax-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.ajb-parallax-content p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*------------------------------------------------------------- lookbook -----------------------------------------------*/
+
+.ajb-lookbook {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.lookbook-titulo {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.lookbook-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.lookbook-item {
+  width: 240px;
+  height: 320px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative; /* necessário para z-index funcionar */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, z-index 0s;
+  z-index: 1;
+}
+
+
+.lookbook-item:hover {
+  transform: scale(1.08);
+  z-index: 10; /* faz ele ficar por cima dos outros */
+}
+
+.lookbook-item span {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+}
+
+/*   ------------------------------------------------------------- essencia -----------------------------------------------*/
+.ajb-essencia-section {
+  background-color: var(--fundo-geral);
+  padding: 80px 20px;
+}
+
+.ajb-essencia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.essencia-texto h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.essencia-texto p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.essencia-img img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+  .ajb-essencia-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .essencia-texto {
+    order: 2;
+  }
+}
+
+/*------------------------------------------------------------- feed falso -----------------------------------------------*/
+
+
+.ajb-insta-feed {
+  padding: 60px 20px;
+  background: var(--fundo-geral);
+  text-align: center;
+}
+
+.ajb-insta-feed h3 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.insta-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.insta-grid img:hover {
+  transform: scale(1.05);
+}
+
+
+
+
+/* c------------------------------------------ compormissos ------------------------------------------*/
+
+.ajb-compromisso {
+  color: var(--fundo-geral);
+  position: relative;
+  padding: 80px 20px;
+  background-color: #8195af;
+}
+.compromisso-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.compromisso-texto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.compromisso-texto p {
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.btn-compromisso {
+  background: rgba(255,255,255,0.9);
+  color: #333;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: inline-block;
+}
+.btn-compromisso:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.compromisso-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.info-card, .counter-card {
+  background: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  transition: background 0.3s, transform 0.3s;
+}
+.info-card:hover, .counter-card:hover {
+  background: rgba(0,0,0,0.6);
+  transform: scale(1.02);
+}
+.info-card img {
+  width: 48px;
+  margin-bottom: 12px;
+}
+.info-card h4 {
+  font-size: 1.1rem;
+}
+.counter-card div {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.counter-card p {
+  font-size: 0.9rem;
+}
+.compromisso-banner {
+  background: var(--cor-principal);
+  text-align: center;
+  padding: 12px 0;
+  position: absolute;
+  bottom: 0; left: 0; width: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* ============================================= */
+/* ======== modal ======== */
+.look-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.look-modal.ativo {
+  display: flex;
+}
+
+.look-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+.look-conteudo {
+  position: relative;
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  padding: 30px 20px;
+  text-align: center;
+  z-index: 10;
+  animation: fadeInUp 0.4s ease forwards;
+}
+
+.look-conteudo img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.look-conteudo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.look-conteudo p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.look-fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ============================================= */
+/* ======== petalas  ======== */
+/* Container das pétalas, posicionado sobre a seção */
+.petalas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* A seção onde as pétalas estão aplicadas deve ser relativa */
+#lookbook {
+  position: relative;
+  z-index: 2;
+}
+
+/* Pétala individual */
+.petala {
+  position: absolute;
+  top: -40px;
+  animation-name: cair;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  pointer-events: none;
+  user-select: none;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+@keyframes cair {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+/* teste */
+
+/* ============================================= */
+/* RESPONSIVE: MOBILE (≤ 768px) */
+/* ============================================= */
+@media (max-width: 768px) {
+  /* Letreiro */
+  .ajb-letreiro-topo { height: 28px; font-size: 0.75rem; }
+  .topo { position: fixed; top: 28px; left: 0; width: 100%; padding: 12px 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+  .header-top-bar { display: flex; }
+  #menu-toggle { display: flex; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); }
+  .desktop-menu, .footer-social { display: none; }
+  #side-menu { left: -100vw; width: 100vw; }
+
+  .container { padding: 30px 16px; }
+
+  .hero-slider .slide { aspect-ratio: 16/9; height: auto; min-height: 200px; }
+  .hero-slider .slides { cursor: grab; }
+
+  .produtos-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .produto img { height: 150px; }
+
+  h1, h2, h3 { font-size: 1.25rem; }
+  p { font-size: 0.9rem; }
+
+  .botao-ver-mais { width: 100%; padding: 1rem; }
+  input, select, button { font-size: 1rem; }
+}
+
+/* ============================================= */
+/* RESPONSIVE: DESKTOP (≥ 769px) */
+/* ============================================= */
+@media (min-width: 769px) {
+  .desktop-menu { display: block; }
+  .topo { position: sticky; top: 32px; }
+  .hero-slider .slide { height: calc(100vh - 120px); }
+  .nav-arrow { display: block; }
+  .produtos-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+
+
+/* ======================= */
+/* MELHORIAS MOBILE AJBLOOM */
+/* ======================= */
+
+/* Evita scroll em background com menu aberto */
+body.menu-aberto {
+  overflow: hidden;
+}
+
+/* Grid de produtos para telas muito pequenas */
+@media (max-width: 380px) {
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Imagens do slider no mobile com cover mais suave */
+@media (max-width: 768px) {
+  .hero-slider .slide img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+/* Botões mobile: mais acessíveis */
+.btn-explorar,
+.btn-estilo,
+.btn-mini-banner,
+.botao-ver-mais {
+  touch-action: manipulation;
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+/* Lookbook responsivo */
+@media (max-width: 480px) {
+  .lookbook-item {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Cartões de estilo responsivos */
+@media (max-width: 768px) {
+  .estilo-card {
+    height: 200px;
+    padding: 10px;
+  }
+  .estilo-conteudo h3 {
+    font-size: 1.2rem;
+  }
+  .estilo-conteudo p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Newsletter responsiva */
+@media (max-width: 768px) {
+  #ajb-newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #ajb-newsletter-form input,
+  #ajb-newsletter-form button {
+    width: 100%;
+  }
+}
+
+/* Botão WhatsApp visível sempre */
+.whatsapp-btn {
+  z-index: 3000;
+}
+
+
+
+/* =================================== */
+/* CORREÇÕES AVANÇADAS MOBILE/iOS AJBLOOM */
+/* =================================== */
+
+/* Impede zoom automático e largura estourada */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Previne zoom automático em inputs no iOS */
+input, select, textarea, button {
+  font-size: 16px !important;
+}
+
+/* Corrige padding lateral em seções no mobile */
+@media (max-width: 768px) {
+  .container,
+  .section-header,
+  .estilo-grid,
+  .footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Garante que imagens e slides não estourem */
+.hero-slider .slide picture,
+.hero-slider .slide img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+/* Corrige grid de produtos */
+.produtos-grid {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Previne scroll lateral no menu lateral */
+.menu-lateral {
+  max-width: 100vw;
+  overflow-x: hidden;
 }

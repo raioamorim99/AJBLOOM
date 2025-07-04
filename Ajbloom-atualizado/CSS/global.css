@@ -1,0 +1,204 @@
+/* =========================== */
+/* AJBLOOM - GLOBAL SECUNDÁRIAS */
+/* =========================== */
+
+:root {
+  --cor-principal: #90b7eb;
+  --cor-menu: #8195af;
+  --fundo-claro: rgba(143, 143, 143, 0.56);
+  --fundo-clean: #cedce08a;
+  --fundo-geral: #eeeeee;
+  --texto: #333;
+
+  --fonte: 'Raleway', sans-serif;
+  --fonte-destaque: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte);
+  background-color: var(--fundo-clean);
+  color: var(--texto);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+
+/* =========================== */
+/* CONTAINER GERAL            */
+/* =========================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* =========================== */
+/* TÍTULOS PRINCIPAIS         */
+/* =========================== */
+h1, h2, h3 {
+  font-family: var(--fonte-destaque);
+  margin-bottom: 20px;
+  color: #222;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* =========================== */
+/* PARÁGRAFOS                 */
+/* =========================== */
+p {
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: #444;
+}
+
+/* =========================== */
+/* BOTÕES PADRÃO              */
+/* =========================== */
+.btn-padrao {
+  background-color: var(--cor-principal);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn-padrao:hover {
+  background-color: #648ac5;
+}
+
+/* =========================== */
+/* FORMULÁRIOS                */
+/* =========================== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 500px;
+}
+
+input[type="email"],
+input[type="text"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  background: #fff;
+}
+
+button[type="submit"] {
+  background-color: #333;
+  color: white;
+  padding: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #000;
+}
+
+/* =========================== */
+/* SESSÕES SEPARADAS          */
+/* =========================== */
+.sessao {
+  margin-bottom: 80px;
+}
+
+.sessao-clara {
+  background-color: #fff;
+  padding: 60px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.sessao-destaque {
+  background-color: var(--fundo-geral);
+  padding: 60px 20px;
+  border-left: 5px solid var(--cor-principal);
+}
+
+/* =========================== */
+/* FRASE IMPACTO              */
+/* =========================== */
+.frase-impacto {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--cor-menu);
+  text-align: center;
+  margin: 40px 0;
+  font-style: italic;
+}
+
+/* =========================== */
+/* ANIMAÇÃO AO ROLAR          */
+/* =========================== */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================== */
+/* RESPONSIVO                 */
+/* =========================== */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .container {
+    padding: 40px 16px;
+  }
+
+  .btn-padrao {
+    width: 100%;
+    text-align: center;
+  }
+}

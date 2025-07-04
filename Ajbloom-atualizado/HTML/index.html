@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AJBLOOM.Shop</title>
+  <title>Ajbloom</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Montserrat:wght@400;600&family=Dancing+Script&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/CSS/index.css" />
 </head>
@@ -12,8 +12,8 @@
   <!-- Letreiro Promocional Fixo -->
   <div class="ajb-letreiro-topo">
     <div class="ajb-letreiro-texto">
-      🎁 Frete grátis acima de R$199 | Lançamentos semanais toda sexta! 🎉
-    </div>
+  Explore a coleção Ajbloom | moda que floresce com você! 
+ </div>
   </div>
 
 <header class="header">
@@ -33,9 +33,10 @@
 
   <nav class="desktop-menu animate-on-scroll" aria-label="Menu principal">
     <ul class="menu-desktop">
-      <li><a href="#" class="home-link">Home</a></li>
-      <li><a href="/HTML/contato.html">Contato</a></li>
+      <li><a href="/HTML/index.html" class="home-link">Home</a></li>
+      <li><a href="#destaques"  class=" ? ">Catálogo</a></li>
       <li><a href="/HTML/sobre.html">Sobre nós</a></li>
+      <li><a href="/HTML/sobre.html">Duvidas </a></li>
     </ul>
   </nav>
 
@@ -43,7 +44,6 @@
     <button id="close-menu" aria-label="Fechar menu">×</button>
     <ul class="menu-lista">
       <li><a href="#" class="home-link">Home</a></li>
-      <li><a href="/HTML/contato.html" id="contato.link">Contato</a></li>
       <li><a href="/HTML/sobre.html" id="sobre.link">Sobre nós</a></li>
     </ul>
   </nav>
@@ -52,38 +52,52 @@
 <div id="overlay"></div>
 
 <section class="hero-slider animate-on-scroll">
+
+
   <div class="slides">  
+     <!-- ✅ NOVO SLIDE DE BOAS-VINDAS -->
+    <div class="slide">
+      <picture>
+        <source media="(max-width: 768px)" srcset="/IMG/bem-vinda-mobile.jpg">
+        <img src="/IMG/banners/banner-bem-vinda.jpg" alt="Bem-vinda à AJBLOOM" />
+      </picture>
+      <div class="hero-text-overlay">
+        <h1>Bem-vinda à AJBLOOM</h1>
+        <p>Moda feita para mulheres que florescem todos os dias.</p>
+        <a href="#destaques" class="btn-explorar">Ver coleção</a>
+      </div>
+    </div>
+
     <div class="slide">
       <picture>
         <source media="(max-width: 768px)" srcset="/IMG/VISTA-SE de AJBLOOM-mobile.jpg">
-        <img src="/IMG/VISTA-SE de AJBLOOM.jpg" alt="Banner 1" />
+        <img src="/IMG/banners/VISTA-SE de AJBLOOM.jpg" alt="Banner 1" loading="lazy" />
       </picture>
     </div>
     <div class="slide">
       <picture>
         <source media="(max-width: 768px)" srcset="/IMG/Estilo que te acompanha-mobile.jpg">
-        <img src="/IMG/Estilo que te acompanha.jpg" alt="Banner 2" />
+        <img src="/IMG/banners/Estilo que te acompanha.jpg" alt="Banner 2" loading="lazy" />
       </picture>
     </div>
     <div class="slide">
       <picture>
         <source media="(max-width: 768px)" srcset="/IMG/voce ganhou-mobile.jpg">
-        <img src="/IMG/voce ganhou.jpg" alt="Banner 3" />
+        <img src="/IMG/banners/voce ganhou.jpg" alt="Banner 3" loading="lazy" />
       </picture>
     </div>
   </div>
+
   <div class="dots">
-    <span class="dot active" data-index="0"></span>
-    <span class="dot" data-index="1"></span>
-    <span class="dot" data-index="2"></span>
-  </div>
+  <span class="dot active" data-index="0"></span>
+  <span class="dot" data-index="1"></span>
+  <span class="dot" data-index="2"></span>
+  <span class="dot" data-index="3"></span>
+</div>
+
 </section>
 
-<!-- Mini banner promocional -->
-<div class="ajb-mini-banner animate-on-scroll">
-  <p>🌸 Produto em alta da semana: Macacão Floral</p>
-  <a href="#produtos" class="btn-mini-banner">Ver agora</a>
-</div>
+
 
 <!-- filtro -->
 <section id="destaques" class="destaques container animate-on-scroll">
@@ -99,20 +113,114 @@
   <button id="ver-mais" class="botao-ver-mais" style="margin-top: 20px;">Ver mais</button>
 </section>
 
-<section class="ajb-valores animate-on-scroll">
-  <div class="ajb-valor">
-    <img src="https://img.icons8.com/color/48/delivery.png" alt="Entrega">
-    <p>Entrega rápida</p>
-  </div>
-  <div class="ajb-valor">
-    <img src="https://img.icons8.com/color/48/checked.png" alt="Qualidade">
-    <p>Qualidade garantida</p>
-  </div>
-  <div class="ajb-valor">
-    <img src="https://img.icons8.com/color/48/customer-support.png" alt="Suporte">
-    <p>Atendimento humano</p>
+
+
+<!-- VIVA O ESTILO AJBLOOM  -->
+<section class="ajb-estilo animate-on-scroll">
+  <div class="container">
+    <h2 class="titulo-estilo">Viva o Estilo AJBLOOM</h2>
+    <p class="subtitulo-estilo">Muito mais que roupas. Uma forma de se expressar.</p>
+
+    <div class="estilo-grid">
+      <div class="estilo-card estilo1">
+        <div class="estilo-conteudo">
+          <h3>Estilo & Atitude</h3>
+          <p>Peças que acompanham sua energia em qualquer ocasião.</p>
+          <a href="#sobre" class="btn-estilo">Saiba mais</a>
+        </div>
+      </div>
+      <div class="estilo-card estilo2">
+        <div class="estilo-conteudo">
+          <h3>Lançamentos</h3>
+          <p>Novidades toda sexta. Não perca as peças queridinhas da semana!</p>
+          <a href="#destaques" class="btn-estilo">Ver lançamentos</a>
+        </div>
+      </div>
+      <div class="estilo-card estilo3">
+        <div class="estilo-conteudo">
+          <h3>Promoções Exclusivas</h3>
+          <p>Descontos incríveis em produtos selecionados. Aproveite agora.</p>
+          <a href="#produtos" class="btn-estilo">Ver ofertas</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-estilo">
+      <p>✨ Conheça nossa nova coleção inspirada na leveza do verão.</p>
+      <a href="#produtos" class="btn-explorar">Explorar agora</a>
+    </div>
   </div>
 </section>
+
+<section class="ajb-insta-feed">
+  <h3>Nos siga no Instagram</h3>
+  <a href="https://www.instagram.com/Ajbloom_" target="_blank">Ajbloom_</a> 
+  <div class="insta-grid">
+    <img src="/IMG/teste.jpg" alt="Insta 1" loading="lazy" />
+    <img src="/IMG/teste.jpg" alt="Insta 2" loading="lazy" />
+    <img src="/IMG/teste.jpg" alt="Insta 3" loading="lazy" />
+    <img src="/IMG/teste.jpg" alt="Insta 4" loading="lazy" />
+    <img src="/IMG/teste.jpg" alt="Insta 5" loading="lazy" />
+    <img src="/IMG/teste.jpg" alt="Insta 6" loading="lazy" />
+  </div>
+</section>
+
+
+<section class="ajb-parallax-banner">
+  <div class="ajb-parallax-content">
+    <h2>Sinta. Vista. Floresça.</h2>
+    <p>A sua essência merece estar presente em cada detalhe.</p>
+  </div>
+</section>
+
+ <section class="ajb-lookbook" id="lookbook">
+  <!-- Contêiner das pétalas flutuantes -->
+  <div class="petalas-container" id="petalas-lookbook"></div>
+
+  <h3 class="lookbook-titulo">LOOKBOOK Ajbloom</h3>
+
+  <div class="lookbook-scroll">
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>Coleção Floral</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>Casual Elegante</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>Summer Vibes</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>Street Bloom</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');"  loading="lazy"/>
+      <span>Minimal Bloom</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>Denim Garden</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>Fresh Elegance</span>
+    </div>
+    <div class="lookbook-item" style="background-image: url('/IMG/teste.jpg');" loading="lazy"/>
+      <span>AJ Girl</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="ajb-essencia-section animate-on-scroll">
+  <div class="ajb-essencia-grid">
+    <div class="essencia-texto">
+      <h2>Não é só roupa. É a sua história.</h2>
+      <p>Cada peça AJBLOOM é pensada para mulheres autênticas, fortes e leves. Use com orgulho o que te representa.</p>
+      <a href="/HTML/sobre.html" class="btn-explorar">Conheça nossa jornada</a>
+    </div>
+    <div class="essencia-img">
+      <img src="/IMG/teste.jpg" alt="Imagem Essência AJBLOOM" loading="lazy" />
+    </div>
+  </div>
+</section>
+
 
 <section class="ajb-depoimentos animate-on-scroll">
   <h3>#SouAJBLOOM</h3>
@@ -133,20 +241,56 @@
   </form>
 </section>
 
-<section id="sobre" class="sobre">
-  <div class="container">
-    <h3 class="animate-on-scroll">Compromisso com você</h3>
-    <p>
-      Desde o início, nosso foco sempre foi mais do que vender: é entregar qualidade, confiança e respeito em cada detalhe. Acreditamos que cada peça de roupa deve refletir não apenas estilo, mas também a essência de quem a veste. Por isso, escolhemos cuidadosamente nossos fornecedores e parceiros, garantindo que cada produto atenda aos nossos altos padrões de qualidade e responsabilidade social.   
-    </p>
+<section class="ajb-valores animate-on-scroll">
+  <div class="ajb-valor">
+    <img src="https://img.icons8.com/color/48/delivery.png" alt="Entrega" loading="lazy"/>
+    <p>Entrega rápida</p>
+  </div>
+  <div class="ajb-valor">
+    <img src="https://img.icons8.com/color/48/checked.png" alt="Qualidade" loading="lazy"/>
+    <p>Qualidade garantida</p>
+  </div>
+  <div class="ajb-valor">
+    <img src="https://img.icons8.com/color/48/customer-support.png" alt="Suporte" loading="lazy"/>
+    <p>Atendimento humano</p>
   </div>
 </section>
+
+<section class="ajb-compromisso animate-on-scroll">
+  <div class="container compromisso-grid">
+    <div class="compromisso-texto">
+      <h2>Compromisso com você</h2>
+      <p>Desde o início, nosso foco sempre foi mais do que vender: é entregar qualidade, confiança e respeito em cada detalhe. Acreditamos que cada peça de roupa deve refletir não apenas estilo, mas também a essência de quem a veste. Por isso, escolhemos cuidadosamente nossos fornecedores e parceiros, garantindo que cada produto atenda aos nossos altos padrões de qualidade e responsabilidade social.</p>
+      <a href="/HTML/sobre.html" class="btn-compromisso">Conheça nossa história</a>
+    </div>
+    <div class="compromisso-info">
+      <div class="info-card">
+        <img src="/IMG/teste.jpg" alt="Qualidade" loading="lazy" />
+        <h4>Qualidade</h4>
+      </div>
+      <div class="info-card">
+        <img src="/IMG/teste.jpg" alt="Confiança" loading="lazy" />
+        <h4>Confiança</h4>
+      </div>
+      <div class="info-card">
+        <img src="/IMG/teste.jpg" alt="Respeito"  loading="lazy" />
+        <h4>Respeito</h4>
+      </div>
+      <div class="counter-card">
+        <div><span class="counter" data-target="5000">0</span>+</div>
+        <p>Clientes felizes</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
 
 <footer class="footer animate-on-scroll">
   <div class="footer-container">
     <div class="footer-column">
       <p class="creditos-site">
-        <img src="/IMG/Logotipo Minimalista Iniciais Preto.jpg" alt="Logo LR" class="logo-lr-img" />
+        <img src="/IMG/Logotipo Minimalista Iniciais Preto.jpg" alt="Logo LR" class="logo-lr-img" loading="lazy" />
         Desenvolvido por 
         <a href="https://www.instagram.com/luantech.oficial" target="_blank">Luan Raio</a> | 
         <a href="https://luanraio.dev" target="_blank">Portfólio</a>
@@ -156,24 +300,18 @@
       <p>✉️ Ajbloomshop@gmail.com</p>
     </div>
     <div class="footer-column">
-      <ul>
-        <li><a href="/HTML/contato.html">Contato</a></li>
-        <li><a href="/HTML/sobre.html">Sobre nós</a></li>
-      </ul>
-    </div>
-    <div class="footer-column">
       <h4>Pagamentos</h4>
       <div class="payment-icons">
-        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" />
-        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" />
-        <img src="https://img.icons8.com/color/48/pix.png" alt="Pix" />
+        <img src="https://img.icons8.com/color/48/visa.png" alt="Visa" loading="lazy" />
+        <img src="https://img.icons8.com/color/48/mastercard.png" alt="Mastercard" loading="lazy" />
+        <img src="https://img.icons8.com/color/48/pix.png" alt="Pix" loading="lazy" />
       </div>
     </div>
     <div class="footer-column">
       <h4>Siga nos</h4>
       <div class="social-icons">
-        <a href="https://www.instagram.com/ajbloom_/"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" /></a>
-        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/tiktok.png" alt="TikTok" /></a>
+        <a href="https://www.instagram.com/ajbloom_/"><img src="https://img.icons8.com/ios-filled/30/ffffff/instagram-new.png" alt="Instagram" loading="lazy" /></a>
+        <a href="#"><img src="https://img.icons8.com/ios-filled/30/ffffff/tiktok.png" alt="TikTok" loading="lazy" /></a>
       </div>
     </div>
   </div>
@@ -188,23 +326,23 @@
 </footer>
 
 <a href="https://wa.me/5541999999999?text=Ol%C3%A1%2C+gostaria+de+saber+mais+sobre+os+produtos+da+AJBLOOM%21" class="whatsapp-btn" target="_blank" aria-label="Fale conosco pelo WhatsApp">
-  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" />
+  <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png" alt="WhatsApp" loading="lazy" />
 </a>
 
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script> 
-<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyDV1x2NIvYm6z7BmxQNDbHCYwxYyR5OMMQ",
-    authDomain: "ajbloom-login.firebaseapp.com",
-    projectId: "ajbloom-login",
-    storageBucket: "ajbloom-login.appspot.com",
-    messagingSenderId: "99320025218",
-    appId: "1:99320025218:web:616cd54aff52671e9da49b"
-  };
-  firebase.initializeApp(firebaseConfig);
-</script>
+<!-- modal -->
+
+<div id="look-modal" class="look-modal">
+  <div class="look-backdrop" onclick="fecharLookModal()"></div>
+  <div class="look-conteudo">
+    <button class="look-fechar" onclick="fecharLookModal()">×</button>
+    <img id="look-img" src="" alt="Look AJBLOOM" />
+    <h2 id="look-nome"></h2>
+    <p id="look-desc"></p>
+    <a id="look-btn" class="btn-explorar" href="#">Ver coleção</a>
+  </div>
+</div>
+
+
 <script src="/JS/index.js"></script>
 </body>
 </html>
