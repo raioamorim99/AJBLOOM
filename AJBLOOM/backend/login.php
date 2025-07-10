@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Login OK → salvar dados na sessão
       $_SESSION["usuario_id"] = $usuario["id"];
       $_SESSION["usuario_nome"] = $usuario["nome"];
-      header("Location: painel.php"); // redirecionar pro painel
+      header("Location: ../pages/painel.php"); // redirecionar pro painel
       exit();
     } else {
       echo "❌ Senha incorreta.";

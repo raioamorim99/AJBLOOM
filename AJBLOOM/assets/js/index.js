@@ -254,18 +254,18 @@ function renderizarProdutos() {
       : "";
 
     divProduto.innerHTML = `
-      <a href="produtos.html?id=${produto.id}">
-        <img src="${produto.imagem}" alt="Imagem do produto ${produto.nome}" />
-      </a>
-      <div class="produto-info">
-        <a href="produtos.html?id=${produto.id}">
-          <h3>${produto.nome}</h3>
-        </a>
-        <div class="produto-preco">
-          ${precoAntigoHtml} R$ ${produto.preco.toFixed(2).replace(".", ",")}
-        </div>
-      </div>
-    `;
+  <a href="produto.php?id=${produto.id}">
+    <img src="${produto.imagem}" alt="Imagem do produto ${produto.nome}" />
+  </a>
+  <div class="produto-info">
+    <a href="produto.php?id=${produto.id}">
+      <h3>${produto.nome}</h3>
+    </a>
+    <div class="produto-preco">
+      ${precoAntigoHtml} R$ ${produto.preco.toFixed(2).replace(".", ",")}
+    </div>
+  </div>
+`;
 
     produtosContainer.appendChild(divProduto);
   });

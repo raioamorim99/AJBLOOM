@@ -1,8 +1,29 @@
-
-/* ======= Wrapper to offset fixed header ======= */
+/* =================== DESKTOP =================== */
 .site-content {
+  margin-top: 0;
   padding-top: 180px;
 }
+
+.user-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-link {
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.user-link i {
+  margin-right: 4px;
+}
+
 
 /* ======= Ensure slider visible and anim affects nothing ======= */
 .animate-on-scroll {
@@ -44,27 +65,25 @@ a {
 
 /* ============================================= */
 /* ========= login/cadastro ========== */
-.user-actions {
-  display: flex;
-  gap: 15px;
-  align-items: center;
-  margin-left: auto;
-}
 
-.user-link {
-  color: #333;
-  text-decoration: none;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-}
 
-.user-link i {
-  margin-right: 6px;
-}
+
+
+
 .user-link:hover {
   color: #6c63ff;
 }
+
+
+/* ============================================= */
+/* ========= login cadastro AJBLOOM ========== */
+
+
+
+
+
+
+
 
 
 /*botão voltar contato*/
@@ -80,43 +99,50 @@ a {
 }
 
 
-
-
-
-
-/* ========== LOGO DESKTOP ========== */
-.site-logo {
+/* ==== AJUSTE FINAL HEADER FIXO E LOGO SEM CRESCER HEADER ==== */
+header {
+  height: 200px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  
+  justify-content: space-between;
+  padding: 0 2rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* mantém sobre o conteúdo */
+}
+
+
+.site-logo {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .site-logo__img {
-  max-height: 240px;
+  max-height: 340px;
   height: auto;
   width: auto;
-  image-rendering: auto;
+  object-fit: contain;
+  display: block;
 }
 
-
 /* ========== LOGO MOBILE ========== */
-@media (max-width: 768px) {
-  
 
-  .site-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
 
   .site-logo__img {
-  max-height: 180px;
+  max-height: 200px;
     width: auto;
     height: auto;
   }
 
-  #menu-toggle {
+  
+/* -------- MENU -------- */
+#menu-toggle {
     position: absolute;
     left: 16px;
     top: 50%;
@@ -124,10 +150,12 @@ a {
     display: flex;
   }
 
-  .hero-slider {
+  
+/* -------- SLIDER -------- */
+.hero-slider {
     margin-top: 96px;
   }
-}
+
 
 .topo {
   display: flex;
@@ -144,11 +172,15 @@ a {
 
 /* Apenas em telas ≥ 769px (desktop) */
 @media (min-width: 769px) {
-  .ajb-header-search {
+  
+/* -------- HEADER -------- */
+.ajb-header-search {
     justify-content: flex-start;
   }
 
-  .desktop-menu {
+  
+/* -------- MENU -------- */
+.desktop-menu {
     flex: 1;
     display: flex;
     justify-content: flex-end;
@@ -159,6 +191,8 @@ a {
 
 /* ============================================= */
 /* ========= Barra de pesquisa ========== */
+
+/* -------- HEADER -------- */
 .ajb-header-search {
   flex: 1;
   display: flex;
@@ -174,11 +208,7 @@ a {
   width: 100%;
   font-size: 1rem;
 }
-@media (max-width: 768px) {
-  .ajb-header-search {
-    display: none; /* esconde no mobile */
-  }
-}
+
 
 .site-content {
   margin-top: 0 !important;
@@ -186,24 +216,14 @@ a {
 }
 
 .site-content > section:first-child {
-  margin-top: 5 !important;
-  padding-top: 0 !important;
+  margin-top: 0;
+  padding-top: 200px;
+
 }
 
-
-
-
-
-
-/* ============================================= */
-/* ========= CABEÇALHO (HEADER) ========== */
-
-
-
-
-
-
 /* Botão Hamburger (aparece apenas no mobile) */
+
+/* -------- MENU -------- */
 #menu-toggle {
   display: none; /* habilitar dentro do @media abaixo */
   flex-direction: column;
@@ -259,10 +279,14 @@ a {
 
 /* ============================================= */
 /* ========= MENU DESKTOP (≥ 769px) ========== */
+
+/* -------- MENU -------- */
 .desktop-menu {
   display: block;
 }
 
+
+/* -------- MENU -------- */
 .menu-desktop {
   display: flex;
   list-style: none;
@@ -276,16 +300,14 @@ a {
   color: var(--texto);
   padding: 8px;
   transition: color 0.3s;
-  margin-right: 23;
+  margin-right: 23px;
 }
 
 .menu-desktop li a:hover {
   color: var(--cor-principal);
 }
 
-
-/* ============================================= */
-/* ========= MENU LATERAL (MOBILE) ========== */
+/* -------- MENU -------- */
 #side-menu {
   position: fixed;
   top: 0;
@@ -304,6 +326,8 @@ a {
   left: 0;
 }
 
+
+/* -------- MENU -------- */
 #close-menu {
   background: none;
   border: none;
@@ -314,6 +338,8 @@ a {
   color: var(--cor-principal);
 }
 
+
+/* -------- MENU -------- */
 .menu-lista {
   list-style: none;
   padding: 0;
@@ -346,12 +372,13 @@ a {
 
 /* ============================================= */
 /* ======== HERO SLIDER (4 BANNERS) ========= */
+
+/* -------- SLIDER -------- */
 .hero-slider {
   position: relative;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
-  margin-top: 180px; /* aumente de 100px para 160px ou ajuste conforme visual */
 }
 
 .slides {
@@ -401,15 +428,18 @@ a {
 
 
 
+
 .btn-explorar {
-  background-color: var(--fundo-clean) !important;
-  color: white !important;
-  padding: 12px 24px !important;
+  background-color: var(--cor-principal);
+  color: #fff;
+  padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s ease;
   display: inline-block;
 }
+
 
 
 /* ============================================= */
@@ -451,6 +481,8 @@ a {
   padding: 40px 20px;
   margin: 0 auto;
 }
+
+/* -------- HEADER -------- */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -485,13 +517,16 @@ a {
   cursor: pointer;
 }
 
-/* Por padrão (desktop), auto-fill para preencher quantas colunas couberem */
+
+/* -------- PRODUTOS -------- */
 .produtos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 20px;
 }
 
+
+/* -------- PRODUTOS -------- */
 .produto {
   background-color: #fff;
   border: 1px solid #eee;
@@ -510,6 +545,8 @@ a {
   object-fit: cover;
   border-bottom: 1px solid #eee;
 }
+
+/* -------- PRODUTOS -------- */
 .produto-info {
   padding: 15px;
 }
@@ -518,6 +555,8 @@ a {
   margin-bottom: 10px;
   color: var(--texto);
 }
+
+/* -------- PRODUTOS -------- */
 .produto-preco {
   font-weight: bold;
   font-size: 16px;
@@ -596,6 +635,8 @@ a {
 }
 
 /* ========= RODAPÉ ========== */
+
+/* -------- FOOTER -------- */
 .footer {
   background-color: #8195af;
   color: #fff;
@@ -604,6 +645,8 @@ a {
   font-size: 14px;
 }
 
+
+/* -------- FOOTER -------- */
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -615,6 +658,8 @@ a {
   text-align: center;
 }
 
+
+/* -------- FOOTER -------- */
 .footer-column {
   flex: 1 1 220px;
   min-width: 200px;
@@ -663,6 +708,8 @@ a {
 }
 
 /* Parte inferior do rodapé */
+
+/* -------- FOOTER -------- */
 .footer-bottom {
   border-top: 1px solid #333;
   margin-top: 30px;
@@ -672,6 +719,8 @@ a {
   color: var(--fundo-geral);
 }
 
+
+/* -------- FOOTER -------- */
 .footer-links {
   margin-top: 8px;
 }
@@ -764,6 +813,8 @@ a {
 }
 
 /* 4. Newsletter */
+
+/* -------- NEWSLETTER -------- */
 .ajb-newsletter {
   background: #fafafa;
   padding: 60px 20px;
@@ -777,6 +828,8 @@ a {
   margin-bottom: 20px;
   font-size: 1rem;
 }
+
+/* -------- NEWSLETTER -------- */
 #ajb-newsletter-form {
   display: flex;
   justify-content: center;
@@ -801,11 +854,15 @@ a {
 
 
 /* Controle de visibilidade do produto destaque */
+
+/* -------- PRODUTOS -------- */
 .produto-destaque-escondido {
   display: none;
   opacity: 0;
 }
 
+
+/* -------- PRODUTOS -------- */
 .produto-destaque-visivel {
   display: block !important;
   opacity: 1;
@@ -814,6 +871,8 @@ a {
 
 
 /* 6. Valores da Marca */
+
+/* -------- VALORES -------- */
 .ajb-valores {
   background: #f5f5f5;
   padding: 60px 20px;
@@ -974,13 +1033,13 @@ a {
 }
 
 .estilo1 {
-  background-image: url('/IMG/teste.jpg');
+  background-image: url('assets/imagens/teste.jpg');
 }
 .estilo2 {
-  background-image: url('/IMG/teste.jpg');
+  background-image: url('assets/imagens/teste.jpg');
 }
 .estilo3 {
-  background-image: url('/IMG/teste.jpg');
+  background-image: url('assets/imagens/teste.jpg');
 }
 
 .cta-estilo {
@@ -995,24 +1054,29 @@ a {
   color: #333;
 }
 
+
 .btn-explorar {
   background-color: var(--cor-principal);
-  color: white;
+  color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
   transition: background 0.3s ease;
+  display: inline-block;
 }
+
+
 
 .btn-explorar:hover {
   background-color: #648ac5;
 }
 
+
 /*------------------------------------------------------------- parapallax -----------------------------------------------*/
 
 .ajb-parallax-banner {
-  background-image: url('/IMG/parallax.png');
+  background-image: url('assets/imagens/parallax-banner.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1053,17 +1117,23 @@ a {
 
 /*------------------------------------------------------------- lookbook -----------------------------------------------*/
 
+
+/* -------- LOOKBOOK -------- */
 .ajb-lookbook {
   padding: 60px 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
 
+
+/* -------- LOOKBOOK -------- */
 .lookbook-titulo {
   font-size: 2rem;
   margin-bottom: 30px;
 }
 
+
+/* -------- LOOKBOOK -------- */
 .lookbook-scroll {
   display: flex;
   overflow-x: auto;
@@ -1072,6 +1142,8 @@ a {
   scroll-snap-type: x mandatory;
 }
 
+
+/* -------- LOOKBOOK -------- */
 .lookbook-item {
   width: 240px;
   height: 320px;
@@ -1106,11 +1178,15 @@ a {
 }
 
 /*   ------------------------------------------------------------- essencia -----------------------------------------------*/
+
+/* -------- ESSÊNCIA -------- */
 .ajb-essencia-section {
   background-color: var(--fundo-geral);
   padding: 80px 20px;
 }
 
+
+/* -------- ESSÊNCIA -------- */
 .ajb-essencia-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1341,6 +1417,8 @@ a {
 }
 
 /* A seção onde as pétalas estão aplicadas deve ser relativa */
+
+/* -------- LOOKBOOK -------- */
 #lookbook {
   position: relative;
   z-index: 2;
@@ -1371,16 +1449,6 @@ a {
 }
 
 
-/* teste */
-
-
-
-/* ======================= */
-/* MELHORIAS MOBILE AJBLOOM */
-/* ======================= */
-
-
-
 
 
 /* Botões mobile: mais acessíveis */
@@ -1404,10 +1472,6 @@ a {
 
 
 
-/* =================================== */
-/* CORREÇÕES AVANÇADAS MOBILE/iOS AJBLOOM */
-/* =================================== */
-
 /* Impede zoom automático e largura estourada */
 html, body {
   max-width: 100vw;
@@ -1429,13 +1493,16 @@ input, select, textarea, button {
   display: block;
 }
 
-/* Corrige grid de produtos */
+
+/* -------- PRODUTOS -------- */
 .produtos-grid {
   width: 100%;
   max-width: 100%;
 }
 
 /* Previne scroll lateral no menu lateral */
+
+/* -------- MENU -------- */
 .menu-lateral {
   max-width: 100vw;
   /* overflow-x: hidden; */
@@ -1445,29 +1512,15 @@ input, select, textarea, button {
 /* ------------------------------------------------- MEDIA QUERIES AJBLOOM ------------------------------------------------- */
 
 /* 0) Em desktop, torna o header fixo no topo */
-@media (min-width: 769px) {
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: #fff; /* garante que o header cubra o slider por baixo */
-  }
-}
+/* Removido ajuste de header 800px quebrado */
 
 /* ============================================= */
 /* ========== COMPORTAMENTO MOBILE =========== */
-@media (max-width: 768px) {
 
-   #side-menu {
-    width: 100vw;
-    left: -100vw;
-  }
   #side-menu.open {
     left: 0;
   }
-}
+
   .hero-slider .slides {
     cursor: grab;  /* mantém ícone de arraste no mobile */
   }
@@ -1499,19 +1552,25 @@ input, select, textarea, button {
 }
 
 /* —— Mobile (até 768px) —— */
-@media (max-width: 768px) {
-  /* Exibe header-top-bar (ícones sociais), hamburger; esconde menu desktop e footer-social */
-}
-  .header-top-bar {
+
+  
+/* -------- HEADER -------- */
+.header-top-bar {
     display: flex;
   }
-  #menu-toggle {
+  
+/* -------- MENU -------- */
+#menu-toggle {
     display: flex;
   }
-  .desktop-menu {
+  
+/* -------- MENU -------- */
+.desktop-menu {
     display: none;
   }
-  .footer-social {
+  
+/* -------- FOOTER -------- */
+.footer-social {
     display: none;
   }
 
@@ -1521,7 +1580,9 @@ input, select, textarea, button {
   }
 
   /* Grade de produtos: 2 colunas até 768px */
-   .produtos-grid {
+   
+/* -------- PRODUTOS -------- */
+.produtos-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .produto img {
@@ -1552,62 +1613,61 @@ input, select, textarea, button {
   }
 
 /* —— Telas muito pequenas (até 480px) —— */
-@media (max-width: 480px) {
-  .produtos-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px;
-  }
+
   .produto img {
     height: 150px;
   }
-}
+
 
 /* —— A partir de 769px (desktop) —— */
 @media (min-width: 769px) {
   /* 1) Esconder tudo que é mobile-only */
-  .header-top-bar { display: none; }
-  #menu-toggle    { display: none; }
-  #side-menu      { display: none; }
+  
+/* -------- HEADER -------- */
+.header-top-bar { display: none; }
+  
+/* -------- MENU -------- */
+#menu-toggle    { display: none; }
+  
+/* -------- MENU -------- */
+#side-menu      { display: none; }
   #overlay        { display: none; }
 
   /* 2) Exibir o menu desktop, exatamente abaixo da logo */
-  .desktop-menu {
+  
+/* -------- MENU -------- */
+.desktop-menu {
     display: block;   /* ativa a exibição do menu em telas ≥ 769px */
   }
 
   /* 3) Footer-social apenas desktop */
-  .footer-social {
+  
+/* -------- FOOTER -------- */
+.footer-social {
     display: block;
   }
 }
 /* FIXA O TOPO NO MOBILE */
-@media (max-width: 768px) {
-  
 
-  .hero-slider {
-    margin-top: 75px; /* espaço para não esconder os banners */
-  }
-}
+
 
 /* HEADER FIXO NO DESKTOP */
 
 
 /* Força 3 colunas no desktop */
 @media (min-width: 769px) {
-  .produtos-grid {
+  
+/* -------- PRODUTOS -------- */
+.produtos-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /* Mobile: letreiro menor */
-@media (max-width: 768px) {
-  .ajb-letreiro-topo {
-    font-size: 0.75rem;
-    height: 28px;
-  }
+
 
   
-}
+
 
 
 /* ============================ */
@@ -1628,12 +1688,7 @@ input, select, textarea, button {
 }
 
 /* Mobile: proporção 16:9, imagem inteira (contain) */
-@media (max-width: 768px) {
-  .hero-slider .slide {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    height: auto;
-  }
+
   .hero-slider .slide picture,
   .hero-slider .slide img {
     width: 100%;
@@ -1643,33 +1698,38 @@ input, select, textarea, button {
     display: block;
     background-color: #f0f0f0;
   }
-}
 
-@media (max-width: 768px) {
-  .ajb-essencia-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .essencia-texto {
+
+  
+/* -------- ESSÊNCIA -------- */
+.essencia-texto {
     order: 2;
   }
-}
 
-@media (max-width: 768px) {
-  /* Letreiro */
-  .ajb-letreiro-topo { height: 28px; font-size: 0.75rem; }
+
+
   
-  .header-top-bar { display: flex; }
-  #menu-toggle { display: flex; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); }
-  .desktop-menu, .footer-social { display: none; }
-  #side-menu { left: -100vw; width: 100vw; }
+  
+/* -------- HEADER -------- */
+.header-top-bar { display: flex; }
+  
+/* -------- MENU -------- */
+#menu-toggle { display: flex; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); }
+  .desktop-menu, 
+/* -------- FOOTER -------- */
+.footer-social { display: none; }
+  
+/* -------- MENU -------- */
+#side-menu { left: -100vw; width: 100vw; }
 
   .container { padding: 30px 16px; }
 
   .hero-slider .slide { aspect-ratio: 16/9; height: auto; min-height: 200px; }
   .hero-slider .slides { cursor: grab; }
 
-  .produtos-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  
+/* -------- PRODUTOS -------- */
+.produtos-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .produto img { height: 150px; }
 
   h1, h2, h3 { font-size: 1.25rem; }
@@ -1677,17 +1737,20 @@ input, select, textarea, button {
 
   .botao-ver-mais { width: 100%; padding: 1rem; }
   input, select, button { font-size: 1rem; }
-}
 
 /* ============================================= */
 /* RESPONSIVE: DESKTOP (≥ 769px) */
 /* ============================================= */
 @media (min-width: 769px) {
-  .desktop-menu { display: block; }
+  
+/* -------- MENU -------- */
+.desktop-menu { display: block; }
   
   .hero-slider .slide { height: calc(100vh - 120px); }
   .nav-arrow { display: block; }
-  .produtos-grid { grid-template-columns: repeat(3, 1fr); }
+  
+/* -------- PRODUTOS -------- */
+.produtos-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 
@@ -1697,53 +1760,33 @@ input, select, textarea, button {
 /* ======================= */
 
 /* Grid de produtos para telas muito pequenas */
-@media (max-width: 380px) {
-  .produtos-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
 
 /* Imagens do slider no mobile com cover mais suave */
-@media (max-width: 768px) {
-  .hero-slider .slide img {
-    object-fit: cover;
-    height: 100%;
-  }
-}
+
+
 
 /* Lookbook responsivo */
-@media (max-width: 480px) {
-  .lookbook-item {
-    width: 100%;
-    height: auto;
-  }
-}
+
+
 
 /* Cartões de estilo responsivos */
-@media (max-width: 768px) {
-  .estilo-card {
-    height: 200px;
-    padding: 10px;
-  }
+
   .estilo-conteudo h3 {
     font-size: 1.2rem;
   }
   .estilo-conteudo p {
     font-size: 0.9rem;
   }
-}
+
 
 /* Newsletter responsiva */
-@media (max-width: 768px) {
-  #ajb-newsletter-form {
-    flex-direction: column;
-    align-items: stretch;
-  }
+
   #ajb-newsletter-form input,
   #ajb-newsletter-form button {
     width: 100%;
   }
-}
+
 
 
 
@@ -1754,22 +1797,150 @@ input, select, textarea, button {
 
 
 /* Corrige padding lateral em seções no mobile */
+
+
+
+
+
+
+
+
+/* =================== MOBILE =================== */
+
 @media (max-width: 768px) {
-  .container,
-  .section-header,
-  .estilo-grid,
-  .footer-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  
+
+  .site-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  
+/* -------- HEADER -------- */
+.ajb-header-search {
+    display: none; /* esconde no mobile */
+  }
+}
+
+@media (max-width: 768px) {
+
+   
+/* -------- MENU -------- */
+#side-menu {
+    width: 100vw;
+    left: -100vw;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Exibe header-top-bar (ícones sociais), hamburger; esconde menu desktop e footer-social */
+}
+
+@media (max-width: 480px) {
+  
+/* -------- PRODUTOS -------- */
+.produtos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  
+
+  
+/* -------- SLIDER -------- */
+.hero-slider {
+    margin-top: 75px; /* espaço para não esconder os banners */
+  }
+}
+
+@media (max-width: 768px) {
+  .ajb-letreiro-topo {
+    font-size: 0.75rem;
+    height: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider .slide {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  
+/* -------- ESSÊNCIA -------- */
+.ajb-essencia-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Letreiro */
+  .ajb-letreiro-topo { height: 28px; font-size: 0.75rem; }
+}
+
+@media (max-width: 380px) {
+  
+/* -------- PRODUTOS -------- */
+.produtos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider .slide img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  
+/* -------- LOOKBOOK -------- */
+.lookbook-item {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .estilo-card {
+    height: 200px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  
+/* -------- NEWSLETTER -------- */
+#ajb-newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
 
+/* -------- FOOTER -------- */
+.footer-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 
 @media (max-width: 480px) {
   .ajb-newsletter,
   .ajb-compromisso,
-  .ajb-valores {
+  
+/* -------- VALORES -------- */
+.ajb-valores {
     padding: 40px 16px;
   }
 }

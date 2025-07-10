@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "conexao.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -6,16 +7,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $email = $_POST["email"];
   $senha = password_hash($_POST["senha"], PASSWORD_DEFAULT);
   $telefone = $_POST["telefone"];
-  $endereco = $_POST["endereco"];
+  $nascimento = $_POST["nascimento"]; // Novo campo
 
-  $sql = "INSERT INTO usuarios (nome, email, senha_hash, telefone, endereco) 
+  $sql = "INSERT INTO usuarios (nome, email, senha_hash, telefone, data_nascimento) 
           VALUES (?, ?, ?, ?, ?)";
 
   $stmt = $conn->prepare($sql);
-  $stmt->bind_param("sssss", $nome, $email, $senha, $telefone, $endereco);
+  $stmt->bind_param("sssss", $nome, $email, $senha, $telefone, $nascimento);
 
   if ($stmt->execute()) {
-    echo "✅ Usuário cadastrado com sucesso!";
+    $_SESSION["usuario_id"] = $conn->insert_id;
+    $_SESSION["usuario_nome"] = $nome;
+    $_SESSION["mensagem_sucesso"] = "Cadastro feito com sucesso!";
+    header("Location: ../pages/index.php");
+    exit();
   } else {
     echo "❌ Erro ao cadastrar: " . $conn->error;
   }
