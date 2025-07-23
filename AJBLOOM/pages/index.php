@@ -1,11 +1,5 @@
-<?php session_start(); ?>
-
-<?php
-if (isset($_SESSION["mensagem_sucesso"])) {
-  echo '<div class="mensagem-sucesso">' . $_SESSION["mensagem_sucesso"] . '</div>';
-  unset($_SESSION["mensagem_sucesso"]);
-}
-?>
+<?php session_start(); 
+$base = '/';?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -56,31 +50,13 @@ if (isset($_SESSION["mensagem_sucesso"])) {
   <!-- Menu desktop à direita -->
   <nav class="desktop-menu" aria-label="Menu principal">
     <ul class="menu-desktop">
-      <li><a href="index.php" class="home-link">Home</a></li>
+      <li><a href="<?= $base ?>index.php" class="home-link">Home</a></li>
       <li><a href="#destaques">Catálogo</a></li>
-      <li><a href="sobre.html">Sobre nós</a></li>
+      <li><a href="vitrine.php">Produtos</a></li>
+      <li><a href="sobre.php">Sobre nós</a></li>
     </ul>
   </nav>
 </div>
-
-
-<div class="user-actions">
-    <?php if (isset($_SESSION["usuario_id"])): ?>
-      <span class="user-link">
-        <i ></i> Olá, <?php echo htmlspecialchars($_SESSION["usuario_nome"]); ?>
-      </span>
-      <a href="../backend/logout.php" class="user-link">
-        <i class="fas fa-sign-out-alt"></i> Sair
-      </a>
-    <?php else: ?>
-      <a href="form-login.php" class="user-link">
-        <i class="fas fa-sign-in-alt"></i> Entrar
-      </a>
-      <a href="form-cadastro.php" class="user-link">
-        <i class="fas fa-user-plus"></i> Cadastrar
-      </a>
-    <?php endif; ?>
-  </div>
 
   <!-- Menu lateral -->
   <nav id="side-menu" class="menu-lateral" aria-hidden="true" aria-labelledby="menu-toggle" tabindex="-1">
@@ -247,28 +223,28 @@ if (isset($_SESSION["mensagem_sucesso"])) {
   <h3 class="lookbook-titulo">LOOKBOOK Ajbloom</h3>
 
   <div class="lookbook-scroll">
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>Coleção Floral</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>Casual Elegante</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>Summer Vibes</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>Street Bloom</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');"  loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');"  loading="lazy">
       <span>Minimal Bloom</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>Denim Garden</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>Fresh Elegance</span>
     </div>
-    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy"/>
+    <div class="lookbook-item" style="background-image: url('../assets/imagens/teste.jpg');" loading="lazy">
       <span>AJ Girl</span>
     </div>
   </div>
@@ -363,20 +339,16 @@ if (isset($_SESSION["mensagem_sucesso"])) {
 
                 <div class="footer-column">
                     <h3>Links Rápidos</h3>
-                    <a href="index.html">Home</a>
-                    <a href="produtos.html">Produtos</a>
+                    <a href="<?= $base ?>index.php" class="home-link">Home</a>
+                    <a href="vitrine.php">Produtos</a>
                     <a href="sobre.html">Sobre Nós</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contato.html">Contato</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Informações</h3>
-                    <a href="politica.html">Política de Privacidade</a>
-                    <a href="trocas.html">Trocas e Devoluções</a>
-                    <a href="termos.html">Termos de Serviço</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="trabalhe.html">Trabalhe Conosco</a>
+                    <a href="politica_ajbloom/politica.php">Política de Privacidade</a>
+                    <a href="politica_ajbloom/trocas.php">Trocas e Devoluções</a>
+                    <a href="politica_ajbloom/termos.php">Termos de Serviço</a>
                 </div>
 
                 <div class="footer-column">

@@ -21,7 +21,8 @@ if (!$nome) {
     $descricao = "Este produto não está mais disponível.";
     $preco = $preco_antigo = $imagem = $categoria = null;
 }
-?>
+
+$base = '/';?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -35,6 +36,7 @@ if (!$nome) {
       background-color: #f0f4f6;
       font-family: sans-serif;
       margin: 0;
+      padding-top: 100px
     }
 
     .produto-container {
@@ -102,27 +104,89 @@ if (!$nome) {
       background-color: #1da851;
     }
     
-  </style>
-</head>
-<body>
-
-
-<header style="
-  background: white;
-  padding: 1rem 2rem;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 0 40px;
+  background-color: white; /* COR NORMAL */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px; /* altura fixa */
-  overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-">
-  <a href='index.php'>
-    <img src='../assets/imagens/logo/logo.png' alt='Logo AJBLOOM' style='max-height: 250px; display: block;'>
-  </a>
-  
-  <a href="vitrine.php" style="padding: 0.6rem 1.2rem; background: black; color: white; border-radius: 8px; text-decoration: none;">Ver mais produtos</a>
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+  background-color: transparent;
+  backdrop-filter: blur(6px); /* opcional, para suavizar */
+}
+
+.logo-container img {
+  height: 240px;
+}
+
+.btn-transparente {
+  background: transparent;
+  padding: 8px 16px;
+  color: transparent; /* invisível inicialmente */
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.btn-transparente:hover {
+  color: black;              /* visível no hover */
+  border-color: black;
+}
+
+header.scrolled .btn-transparente {
+  color: black;              /* visível ao rolar */
+  border-color: black;
+}
+
+.voltar-btn {
+  margin-right: 20px;
+  background: transparent;
+  color: transparent;
+  border: 1px solid transparent;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.voltar-btn:hover {
+  color: black;
+  border-color: black;
+}
+
+header.scrolled .voltar-btn {
+  color: black;
+  border-color: black;
+}
+
+</style>
+
+</head>
+<body>
+
+  <header>
+  <div class="logo-container">
+    <img src="../assets/imagens/logo/logo.png" alt="AJBLOOM Logo">
+  </div>
+
+  <div>
+    <a href="index.php" class="voltar-btn">← Voltar à loja</a>
+    <a href="vitrine.php" class="btn-transparente">Ver mais produtos</a>
+  </div>
 </header>
+
 
 
 <main class="produto-container">
@@ -151,6 +215,18 @@ if (!$nome) {
     <?php endif; ?>
   </div>
 </main>
+
+
+<script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
 
 </body>
 </html>
