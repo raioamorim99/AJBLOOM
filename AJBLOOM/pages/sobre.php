@@ -213,17 +213,13 @@ $base = '/';?>
                     <a href="index.html">Home</a>
                     <a href="produtos.html">Produtos</a>
                     <a href="sobre.html">Sobre Nós</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contato.html">Contato</a>
                 </div>
 
                 <div class="footer-column">
                     <h3>Informações</h3>
-                    <a href="politica.html">Política de Privacidade</a>
                     <a href="trocas.html">Trocas e Devoluções</a>
                     <a href="termos.html">Termos de Serviço</a>
-                    <a href="faq.html">FAQ</a>
-                    <a href="trabalhe.html">Trabalhe Conosco</a>
+                    
                 </div>
 
                 <div class="footer-column">
